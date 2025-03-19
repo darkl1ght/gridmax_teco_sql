@@ -41,23 +41,18 @@ SELECT
             3
         )
     ) AS 'VALUE',
-    [VALUETYPE] = CASE
+    CASE
         WHEN [ObjectType] = 'Generator' THEN 'g'
         WHEN [ObjectType] = 'Station Service' THEN 's'
         WHEN [ObjectType] = 'Reserve' THEN 'r'
-    END
+    END AS [VALUETYPE]
 FROM
     his_user.GOSS_Search_AccumulatorHistory_Fn(@SearchUID, @StartDate, @EndDate)
 GROUP BY
-    [ObjectName],
-    YEAR(DATEADD(HOUR, -1, HIST_TIMESTAMP_TZ)),
-    MONTH(DATEADD(HOUR, -1, HIST_TIMESTAMP_TZ)),
     DAY(DATEADD(HOUR, -1, HIST_TIMESTAMP_TZ)),
-    HIST_TIMESTAMP_TZ,
     [ObjectGrandParent],
     [ObjectParent],
     [ObjectType],
-    [MeasUnit],
     [Label]
 END;
 
