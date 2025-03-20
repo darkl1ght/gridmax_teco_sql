@@ -1,10 +1,9 @@
 USE [HIS_USER]
 GO
-SET
-  ANSI_NULLS ON
+/****** Object:  UserDefinedFunction [GADS].[PLANT_MONTHLY_GEN_FN]    Script Date: 3/20/2025 12:18:45 PM ******/
+SET ANSI_NULLS ON
 GO
-SET
-  QUOTED_IDENTIFIER ON
+SET QUOTED_IDENTIFIER ON
 GO
 ;
 
@@ -28,13 +27,13 @@ BEGIN
   @StartDate DATETIME,
   @EndDate DATETIME;
 
-  DECLARE @PLANT_METER_READINGS TABLE (
+  DECLARE @PLANT_MONTHLY_GEN TABLE (
     DATEPART INT,
     STATION VARCHAR(256),
     PLANT VARCHAR(256),
     UNIT VARCHAR(256),
-    VALUE INT,
-    VALUETYPE VARCHAR(256)
+    UNIT_GROSS VARCHAR(256),
+    UNIT_NET VARCHAR(256)
   );
 
   -- Set the appropriate SearchUID based on the plant parameter
@@ -79,51 +78,52 @@ BEGIN
   IF @SearchUID = 'Plant Net Bayside'
   OR @SearchUID = 'Plant Net Fleet' BEGIN
   INSERT INTO
-    @PLANT_METER_READINGS
+    @PLANT_MONTHLY_GEN
   SELECT
     *
   FROM
-    his_user.BAYSIDE_MONTHLY_GEN_FN('Plant Net Bayside', @StartDate, @EndDate);
+    [his_user].[GADS].[BAYSIDE_MONTHLY_GEN_FN]('Plant Net Bayside', @StartDate, @EndDate);
 
-  END -- Insert data from Big Bend plant if it's specifically requested or if Fleet data is requested
+  END
   IF @SearchUID = 'Plant Net Big Bend'
   OR @SearchUID = 'Plant Net Fleet' BEGIN
   INSERT INTO
-    @PLANT_METER_READINGS
+    @PLANT_MONTHLY_GEN
   SELECT
     *
   FROM
-    his_user.BIG_BEND_MONTHLY_GEN_FN('Plant Net Big Bend', @StartDate, @EndDate);
+    [his_user].[GADS].BIG_BEND_MONTHLY_GEN_FN('Plant Net Big Bend', @StartDate, @EndDate);
 
-  END -- Insert data from Polk plant if it's specifically requested or if Fleet data is requested
+  END
   IF @SearchUID = 'Plant Net Polk'
   OR @SearchUID = 'Plant Net Fleet' BEGIN
   INSERT INTO
-    @PLANT_METER_READINGS
+    @PLANT_MONTHLY_GEN
   SELECT
     *
   FROM
-    his_user.POLK_MONTHLY_GEN_FN('Plant Net Polk', @StartDate, @EndDate);
+    [his_user].[GADS].POLK_MONTHLY_GEN_FN('Plant Net Polk', @StartDate, @EndDate);
 
-  END -- Insert data from MacDill plant if it's specifically requested or if Fleet data is requested
+  END
   IF @SearchUID = 'Plant Net MacDill'
   OR @SearchUID = 'Plant Net Fleet' BEGIN
   INSERT INTO
-    @PLANT_METER_READINGS
+    @PLANT_MONTHLY_GEN
   SELECT
     *
   FROM
-    his_user.MACDILL_MONTHLY_GEN_FN('Plant Net MacDill', @StartDate, @EndDate);
+    [his_user].[GADS].MACDILL_MONTHLY_GEN_FN('Plant Net MacDill', @StartDate, @EndDate);
 
-  END -- Insert data from Solar plant if it's specifically requested or if Fleet data is requested
+  END
   IF @SearchUID = 'Plant Net Solar'
   OR @SearchUID = 'Plant Net Fleet' BEGIN
   INSERT INTO
-    @PLANT_METER_READINGS
+    @PLANT_MONTHLY_GEN
   SELECT
     *
   FROM
-    his_user.SOLAR_MONTHLY_GEN_FN('Plant Net Solar', @StartDate, @EndDate);
+    [his_user].[GADS].SOLAR_MONTHLY_GEN_FN('Plant Net Solar', @StartDate, @EndDate);
+  END
 
   INSERT INTO
     @RESULTS (
@@ -143,11 +143,12 @@ BEGIN
     UNIT,
     UNIT_GROSS,
     UNIT_NET,
-    @Year,
-    @Month
+    @Year as YEAR,
+    @Month AS MONTH
   FROM
-    @PLANT_METER_READINGS 
+    @PLANT_MONTHLY_GEN
 
-  RETURN;
+	RETURN
 
 END;
+
