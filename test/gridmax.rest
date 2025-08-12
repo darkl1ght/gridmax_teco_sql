@@ -1,0 +1,90 @@
+### Test All-in-one
+POST http://localhost:7071/api/gridmax/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"ALL\",\"year\":2025,\"month\":1}"
+    ]
+  ]
+}
+
+### Test Mock
+POST http://localhost:7071/api/gridmax/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"ALL\",\"year\":2025,\"month\":1,\"isMock\":true}"
+    ]
+  ]
+}
+
+### Test BAYSIDE
+POST http://localhost:7071/api/gridmax/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"BAYSIDE\",\"year\":2025,\"month\":1}"
+    ]
+  ]
+}
+
+### Test BIGBEND
+POST http://localhost:7071/api/gridmax/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"BIGBEND\",\"year\":2025,\"month\":1}"
+    ]
+  ]
+}
+
+### Test POLK
+POST http://localhost:7071/api/gridmax/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"POLK\",\"year\":2025,\"month\":1}"
+    ]
+  ]
+}
+
+### Test MACDILL
+POST http://localhost:7071/api/gridmax/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"MACDILL\",\"year\":2025,\"month\":1}"
+    ]
+  ]
+}
+
+### Test SOLAR
+POST http://localhost:7071/api/gridmax/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"SOLAR\",\"year\":2025,\"month\":1}"
+    ]
+  ]
+}

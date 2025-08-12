@@ -1,0 +1,47 @@
+[
+  {
+    "Reporting_Level": "Station",
+    "Location": "Bayside Power Station",
+    "Begin_Date": "01/01/2024 00:00",
+    "End_Date": "12/01/2024 00:00",
+    "Service_Hours": "198.66",
+    "Gross_Dependable_Capacity": "58.67",
+    "Net_Dependable_Capacity": "57.67",
+    "Gross_Generation": "5161376.61",
+    "Net_Generation": "5077572.74",
+    "Net_Capacity_Factor": "1.80",
+    "Net_Equiv_Avail_Factor": " 96.43",
+    "Net_Output_Factor": "79.52",
+    "Net_EFOR": "0.87"
+  },
+  {
+    "Reporting_Level": "Plant",
+    "Location": "Bayside 1",
+    "Begin_Date": "01/01/2024 00:00",
+    "End_Date": "12/01/2024 00:00",
+    "Service_Hours": "198.66",
+    "Gross_Dependable_Capacity": "58.67",
+    "Net_Dependable_Capacity": "57.67",
+    "Gross_Generation": "3305062.96",
+    "Net_Generation": "3238481.36",
+    "Net_Capacity_Factor": "1.80",
+    "Net_Equiv_Avail_Factor": "96.43",
+    "Net_Output_Factor": "79.52",
+    "Net_EFOR": "0.87"
+  },
+  {
+    "Reporting_Level": "Unit",
+    "Location": "Bayside Power Station BS CT1(A)",
+    "End_Date": "12/01/2024 00:00",
+    "Begin_Date": "01/01/2024 00:00",
+    "Service_Hours": "198.66",
+    "Gross_Dependable_Capacity": "58.67",
+    "Net_Dependable_Capacity": "57.67",
+    "Gross_Generation": "20468.25",
+    "Net_Generation": "20050.73",
+    "Net_Capacity_Factor": "1.80",
+    "Net_Equiv_Avail_Factor": "96.43",
+    "Net_Output_Factor": "79.52",
+    "Net_EFOR": "0.87"
+  }
+]

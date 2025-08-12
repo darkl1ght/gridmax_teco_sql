@@ -1,0 +1,113 @@
+@userid = tecowebsvce
+@password = cant-put-here-set-this-as-os-environment-var
+@begindate = 2024-01-01T00:00:00
+@enddate = 2024-01-31T00:00:00
+@svcurl = https://teco-orap-xfer.spsinc.com/ORAPDataExtract.svc
+
+### GetGenFuelPerf
+curl --location '{{svcurl}}' \
+--header 'Content-Type: application/soap+xml;charset=UTF-8;' \
+--data '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <soap:Header>
+    <wsa:To>{{svcurl}}</wsa:To>   
+    <wsa:Action>http://tempuri.org/IService1/GetGenFuelPerf</wsa:Action>
+  </soap:Header>
+  <soap:Body>
+      <tem:GetGenFuelPerf>
+         <tem:aUserID>{{userid}}</tem:aUserID>
+         <tem:aPassword>{{password}}</tem:aPassword>
+         <tem:aBeginDate>{{begindate}}</tem:aBeginDate>
+         <tem:anEndDate>{{enddate}}</tem:anEndDate>
+      </tem:GetGenFuelPerf>
+   </soap:Body>
+</soap:Envelope>'
+
+###  GetGenPerfIncent
+curl --location '{{svcurl}}' \
+--header 'Content-Type: application/soap+xml;charset=UTF-8;' \
+--data '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <soap:Header>
+    <wsa:To>{{svcurl}}</wsa:To>   
+    <wsa:Action>http://tempuri.org/IService1/GetGenPerfIncent</wsa:Action>
+  </soap:Header>
+  <soap:Body>
+      <tem:GetGenPerfIncent>
+         <tem:aUserID>{{userid}}</tem:aUserID>
+         <tem:aPassword>{{password}}</tem:aPassword>
+         <tem:aBeginDate>{{begindate}}</tem:aBeginDate>
+         <tem:anEndDate>{{enddate}}</tem:anEndDate>
+      </tem:GetGenPerfIncent>
+   </soap:Body>
+</soap:Envelope>'
+
+###  GetOutages
+curl --location '{{svcurl}}' \
+--header 'Content-Type: application/soap+xml;charset=UTF-8;' \
+--data '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <soap:Header>
+    <wsa:To>{{svcurl}}</wsa:To>   
+    <wsa:Action>http://tempuri.org/IService1/GetOutages</wsa:Action>
+  </soap:Header>
+  <soap:Body>
+      <tem:GetOutages>
+         <tem:aUserID>{{userid}}</tem:aUserID>
+         <tem:aPassword>{{password}}</tem:aPassword>
+         <tem:aBeginDate>{{begindate}}</tem:aBeginDate>
+         <tem:anEndDate>{{enddate}}</tem:anEndDate>
+      </tem:GetOutages>
+   </soap:Body>
+</soap:Envelope>'
+
+###  GetFleetRAMKPIs
+curl --location '{{svcurl}}' \
+--header 'Content-Type: application/soap+xml;charset=UTF-8;' \
+--data '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <soap:Header>
+    <wsa:To>{{svcurl}}</wsa:To>   
+    <wsa:Action>http://tempuri.org/IService1/GetFleetRAMKPIs</wsa:Action>
+  </soap:Header>
+  <soap:Body>
+      <tem:GetFleetRAMKPIs>
+         <tem:aUserID>{{userid}}</tem:aUserID>
+         <tem:aPassword>{{password}}</tem:aPassword>
+         <tem:aBeginDate>{{begindate}}</tem:aBeginDate>
+         <tem:anEndDate>{{enddate}}</tem:anEndDate>
+      </tem:GetFleetRAMKPIs>
+   </soap:Body>
+</soap:Envelope>'
+
+###  GetEvtHrsSummary
+curl --location '{{svcurl}}' \
+--header 'Content-Type: application/soap+xml;charset=UTF-8;' \
+--data '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <soap:Header>
+    <wsa:To>{{svcurl}}</wsa:To>   
+    <wsa:Action>http://tempuri.org/IService1/GetEvtHrsSummary</wsa:Action>
+  </soap:Header>
+  <soap:Body>
+      <tem:GetEvtHrsSummary>
+         <tem:aUserID>{{userid}}</tem:aUserID>
+         <tem:aPassword>{{password}}</tem:aPassword>
+         <tem:aBeginDate>{{begindate}}</tem:aBeginDate>
+         <tem:anEndDate>{{enddate}}</tem:anEndDate>
+      </tem:GetEvtHrsSummary>
+   </soap:Body>
+</soap:Envelope>'
+
+###  GetNetFactorsRates
+curl --location '{{svcurl}}' \
+--header 'Content-Type: application/soap+xml;charset=UTF-8;' \
+--data '<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <soap:Header>
+    <wsa:To>{{svcurl}}</wsa:To>   
+    <wsa:Action>http://tempuri.org/IService1/GetNetFactorsRates</wsa:Action>
+  </soap:Header>
+  <soap:Body>
+      <tem:GetNetFactorsRates>
+         <tem:aUserID>{{userid}}</tem:aUserID>
+         <tem:aPassword>{{password}}</tem:aPassword>
+         <tem:aBeginDate>{{begindate}}</tem:aBeginDate>
+         <tem:anEndDate>{{enddate}}</tem:anEndDate>
+      </tem:GetNetFactorsRates>
+   </soap:Body>
+</soap:Envelope>'

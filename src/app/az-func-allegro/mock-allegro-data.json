@@ -1,0 +1,94 @@
+{
+  "SlfConsumptionQuality": [
+    {
+      "area": "Polk",
+      "dischargelocation": "Polk Unit 2",
+      "commodityclass": "LIQUID",
+      "unit": "bbl",
+      "quantity": 8.92,
+      "accountingdate": "2024-11-30 00:00:00",
+      "operationaldate": "2024-11-30 00:00:00"
+    },
+    {
+      "area": "Polk",
+      "dischargelocation": "Polk Unit 3",
+      "commodityclass": "LIQUID",
+      "unit": "bbl",
+      "quantity": 989.35,
+      "accountingdate": "2024-11-30 00:00:00",
+      "operationaldate": "2024-11-30 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": -566,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-17 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": 566,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-17 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": -409,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-18 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": 409,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-18 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": -918,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-19 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": 918,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-19 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": -1209,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-20 00:00:00"
+    },
+    {
+      "area": "Big Bend",
+      "dischargelocation": "BB Unit 4",
+      "commodityclass": "SOLID",
+      "unit": "ton",
+      "quantity": 1209,
+      "accountingdate": "2024-10-31 00:00:00",
+      "operationaldate": "2024-09-20 00:00:00"
+    }
+  ]
+}

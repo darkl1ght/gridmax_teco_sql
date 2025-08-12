@@ -1,0 +1,28 @@
+USE DATABASE SF_DB_DAP_RAW_DEV;
+
+call ALLEGRO.GADS_DATA_CDC2('SlfConsumptionQuality','2020-01-01','2020-01-31'); --16s
+select * from allegro.gads_slf_consumption_quality2; --67
+
+--- ISSUE no data
+call GRIDMAX.DAILY_GEN_CDC2('ALL','2025-01-01','2025-01-31'); -- 73sec
+select * from gridmax.daily_gen2; --0
+
+call ORAP.ORAP_KPI_CDC2('GetGenFuelPerf','2020-01-01','2020-01-31'); --3s
+select * from orap.gen_fuel_perf2; --41
+call ORAP.ORAP_KPI_CDC2('GetGenPerfIncent','2020-01-01','2020-01-31'); --2.7s
+select * from orap.gen_perf_incentives2; --0/84
+call ORAP.ORAP_KPI_CDC2('GetOutages','2020-01-01','2020-01-31'); --2.3s
+select * from orap.outages2; --0/144
+call ORAP.ORAP_KPI_CDC2('GetFleetRAMKPIs','2020-01-01','2020-01-31'); --2.4s
+select * from orap.fleet_ram_kpis2; --0/2
+call ORAP.ORAP_KPI_CDC2('GetEvtHrsSummary','2020-01-01','2020-01-31'); --2sec
+select * from orap.event_hours_summary2; --0/76
+call ORAP.ORAP_KPI_CDC2('GetNetFactorsRates','2020-01-01','2020-01-31'); --2.5s
+select * from orap.net_factors_rates2; --0/76
+ 
+call PGSDSS.GADS_DATA_CDC2('Day','2020-01-01','2020-01-31'); --1.5s
+select * from pgsdss.gads_day2; --31
+call PI.GADS_DATA_CDC2('PiData','2020-01-01','2020-01-31'); --1m42s
+select * from pi.gads_data2; --29,951 
+
+select * from gads.ext_func_control_table where table_nm like '%2' and ext_func_start_dt > '2025-05-31 09:21:55.809 -0400';

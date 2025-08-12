@@ -1,0 +1,38 @@
+### Day values
+POST http://localhost:7071/api/pgsdss/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"Day\",\"tagIds\":[1002246,1000479,1000475,1000478,1000474,1000583,1000570,1003313,1003394,1003404,2000053,2000034,2000006,1002247,1002246,1000801],\"startTime\":\"2021-07-01\",\"endTime\":\"2021-08-01\"}"
+    ]
+  ]
+}
+
+### Hour values
+POST http://localhost:7071/api/pgsdss/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"Hour\",\"tagIds\":[1002246,1000479,1000475,1000478,1000474,1000583,1000570,1003313,1003394,1003404,2000053,2000034,2000006,1002247,1002246,1000801],\"startTime\":\"2021-07-01\",\"endTime\":\"2021-08-01\"}"
+    ]
+  ]
+}
+
+### mockFunc Mock
+POST http://localhost:7071/api/pgsdss/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"Hour\",\"tagIds\":[1000479],\"startTime\":\"2021-07-01\",\"endTime\":\"2021-08-01\",\"isMock\":true}"
+    ]
+  ]
+}

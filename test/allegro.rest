@@ -1,0 +1,11 @@
+POST http://localhost:7071/api/allegro/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"SlfConsumptionQuality\",\"beginDate\":\"2024-10-01\",\"endDate\":\"2024-10-31\",\"isMock\":false}"
+    ]
+  ]
+}

@@ -1,0 +1,6 @@
+CREATE OR REPLACE TASK SF_DB_DAP_RAW_DEV.GADS.SF_TASK_GADS_DATA_CDC
+  WAREHOUSE = WH_DAP_DEV
+  SCHEDULE = 'USING CRON 0 4 * * * America/New_York' -- Every day 4AM EST
+  COMMENT = 'Daily task to execute INGEST_GADS_DATA_SP for conditional date-based ingestion.'
+AS
+CALL SF_DB_DAP_RAW_DEV.ALL_GADS_DATA_CDC();

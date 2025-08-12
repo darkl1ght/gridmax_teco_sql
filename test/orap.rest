@@ -1,0 +1,90 @@
+### GetGenFuelPerf
+POST http://localhost:7071/api/orap/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"GetGenFuelPerf\",\"beginDate\":\"2025-01-01\",\"endDate\":\"2025-01-31\"}"
+    ]
+  ]
+}
+
+### GetGenPerfIncent
+POST http://localhost:7071/api/orap/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"GetGenPerfIncent\",\"beginDate\":\"2025-01-01\",\"endDate\":\"2025-01-31\"}"
+    ]
+  ]
+}
+
+### GetOutages
+POST http://localhost:7071/api/orap/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"GetOutages\",\"beginDate\":\"2025-01-01\",\"endDate\":\"2025-01-31\"}"
+    ]
+  ]
+}
+
+### GetFleetRAMKPIs
+POST http://localhost:7071/api/orap/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"GetFleetRAMKPIs\",\"beginDate\":\"2024-10-01\",\"endDate\":\"2024-10-31\"}"
+    ]
+  ]
+}
+
+### GetEvtHrsSummary
+POST http://localhost:7071/api/orap/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"GetEvtHrsSummary\",\"beginDate\":\"2025-01-01\",\"endDate\":\"2025-01-31\"}"
+    ]
+  ]
+}
+
+### GetNetFactorsRates
+POST http://localhost:7071/api/orap/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"GetNetFactorsRates\",\"beginDate\":\"2025-01-01\",\"endDate\":\"2025-01-31\"}"
+    ]
+  ]
+}
+
+### GetMockGenFuelPerf
+POST http://localhost:7071/api/orap/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"GetGenFuelPerf\",\"beginDate\":\"2025-01-01\",\"endDate\":\"2025-01-31\",\"isMock\":true}"
+    ]
+  ]
+}

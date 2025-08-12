@@ -1,0 +1,78 @@
+### PIAdvCalcFilDat - SOLAR HOURS
+POST http://localhost:7071/api/pi/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"PIAdvCalcFilDat\",\"tags\":[\"LEGOLAND.UN.LEGOLAND.MW\"],\"startTime\":\"2025-06-01 00:00:00.000\",\"endTime\":\"2025-06-30 00:00:00.000\",\"server\":\"YBREMSHIST01P\", \"filtExp\":\"'LEGOLAND.UN.LEGOLAND.MW'>0.01\", \"sampMode\":\"interpolated\", \"interval\":\"1d\"}"
+   ]
+  ]
+}
+
+### PIAdvCalcDat - POLK GAS (Working Good!!)
+POST http://localhost:7071/api/pi/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"PIAdvCalcDat\",\"tags\":[\"1FGSFI001VO\",\"1ABMFI901\",\"1FGSFI970NGAS\",\"1FGSFI970NMIX\",\"2FGSFI905FL\",\"3FGSFI905FL\",\"4FGSFI905FL\",\"5FGSFI905FL\",\"2FGSFI606VO\",\"3FGSFI606VO\",\"4FGSFI606VO\",\"5FGSFI606VO\"],\"startTime\":\"2024-10-01 00:00:00.000\",\"endTime\":\"2024-11-01 00:00:00.000\",\"interval\":\"1d\",\"mode\":\"total\",\"calcBasis\":\"time-weighted\",\"minPctGood\":0,\"cFactor\":86.4,\"server\":\"PLKPISRV01P\"}"
+    ]
+  ]
+}
+
+### PIAdvCalcDat - POLK GAS (Working Good!!) MOCK
+POST http://localhost:7071/api/pi/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"isMock\":true,\"func\":\"PIAdvCalcDat\",\"tags\":[\"1FGSFI001VO\",\"1ABMFI901\",\"1FGSFI970NGAS\",\"1FGSFI970NMIX\",\"2FGSFI905FL\",\"3FGSFI905FL\",\"4FGSFI905FL\",\"5FGSFI905FL\",\"2FGSFI606VO\",\"3FGSFI606VO\",\"4FGSFI606VO\",\"5FGSFI606VO\"],\"startTime\":\"2024-10-01 00:00:00.000\",\"endTime\":\"2024-11-01 00:00:00.000\",\"interval\":\"1d\",\"mode\":\"total\",\"calcBasis\":\"time-weighted\",\"minPctGood\":0,\"cFactor\":86.4,\"server\":\"PLKPISRV01P\"}"
+    ]
+  ]
+}
+
+### PIAdvCalcFilDat - POLK GAS
+POST http://localhost:7071/api/pi/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"PIAdvCalcFilDat\", \"tags\":[\"1ABMFI901\"], \"startTime\":\"2025-01-01 00:00:00.000\", \"endTime\":\"2025-02-01 00:00:00.000\", \"interval\":\"1d\", \"mode\":\"total\", \"calcBasis\":\"time-weighted\", \"minPctGood\":0, \"filtExp\":\"(''''1abmbl962''''=\\\"Yes\\\")\", \"sampMode\":\"PIPointRecordedValues\", \"sampFreq\":\"1h\", \"cFactor\":0.000277777777777777, \"server\":\"PLKPISRV01P\"}"
+   ]
+  ]
+}
+
+
+### PIAdvCalcFilDat POLK GAS Mock
+POST http://localhost:7071/api/pi/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"isMock\":true,\"func\":\"PIAdvCalcFilDat\",\"tags\":[\"BB_SOLAR.UN.BIG_BEND_SOLAR.MW\",\"TIA_SOLR.UN.TIA_SOLAR.MW\",\"LEGOLAND.UN.LEGOLAND.MW\",\"PAYNECRK.UN.PAYNECRK_SOLAR.MW\",\"BALMSOLR.UN.BALM_SOLAR.MW\",\"LITHIA.UN.LITHIA_SOLAR.MW\",\"HANCOCK.UN.HANCOCK_SOLAR.MW\",\"LMR_SOLR.UN.LMR_SOLAR.MW\",\"PEACECRK.UN.PEACECRK_SOLAR.MW\",\"GRANGE.UN.GRANGE_SOLAR.MW\",\"BONNIE.UN.BONNIE_SOLAR.MW\",\"WIMAUMA.UN.WIMAUMA_SOLAR.MW\",\"DURRANCE.UN.DURRANCE_SOLAR.MW\",\"MAGNOLIA.UN.MAGNOLIA_SOLAR.MW\",\"MTN_VIEW.UN.MTN_VIEW_SOLAR.MW\",\"JAMISON.UN.JAMISON_SOLAR.MW\",\"BB_SOLR2.UN.BIGBEND_SOLAR2.MW\",\"LAURLOAK.UN.LAURLOAK_SOLAR.MW\",\"RIVRSIDE.UN.RIVERSIDE_SOLR.MW\",\"JUNIPER.UN.JUNIPER_SOLAR.MW\",\"ALAFIA.UN.ALAFIA_SOLAR.MW\",\"LK_MABEL.UN.LK_MABEL_SOLAR.MW\",\"DOVER.UN.DOVER_SOLAR.MW\",\"AGRIVLT1.DER.BB_AGRIVOLTAIC.KW\",\"H2OSOLR1.DER.FLOATING_SOLAR.KW\",\"ESA_SOLR.DER.ESA_SOLAR.KW\",\"MG67_93.DER.MICROGRID.KW\"],\"startTime\":\"2024-01-01\",\"endTime\":\"2024-02-01\",\"server\":\"EDPISERVER\"}"
+   ]
+  ]
+}
+
+### PIAdvCalcFilDat BAYSIDE WORKING GOOD
+POST http://localhost:7071/api/pi/ HTTP/1.1
+content-type: application/json
+
+{
+  "data": [
+    [
+      null,
+      "{\"func\":\"PIAdvCalcFilDat\", \"tags\":[\"1afgsfi602\"], \"startTime\":\"2024-12-01 00:00:00.000\", \"endTime\":\"2025-01-01 00:00:00.000\", \"interval\":\"1d\", \"filtExp\":\"(''''1AFGSVZLO213''''=\\\"OPEN\\\")\", \"mode\":\"total\", \"calcBasis\":\"time-weighted\", \"sampMode\":\"PIPointRecordedValues\", \"sampFreq\":\"10m\", \"minPctGood\":0, \"cFactor\":86400, \"server\":\"BPSPISRV01P\"}"
+   ]
+  ]
+}
